@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block body %}
+
+{% csrf_token %}
+
+<h1>{{title}}</h1>
+</br>
+<p>{{content}}</p>
+
+<a href="{% url 'edit' title=title %}">
+    <input type="Submit" class="btn btn-primary" placeholder="Edit" value="Edit">
+</a>
+
+{% endblock %}
